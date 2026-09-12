@@ -31,8 +31,6 @@ jobs:
         echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
 
     - uses: actions/checkout@v7
-      with:
-        ref: ${{ github.event.inputs.tag || github.ref }}
 
     - name: Install Rust toolchain
       uses: dtolnay/rust-toolchain@stable
